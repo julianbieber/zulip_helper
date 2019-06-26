@@ -79,7 +79,7 @@ impl ReviewAnalysis for Vec<Review> {
             .iter()
             .filter(|review| review.state == ReviewStates::APPROVED)
             .count()
-            >= 1;
+            == 1;
         let no_changes_requested = self
             .iter()
             .filter(|review| review.state == ReviewStates::CHANGES_REQUESTED)
